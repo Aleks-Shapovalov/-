@@ -14,6 +14,4 @@ int max = numberA;
  
     if(numberB > numberA) max = numberB;
     if(numberС > numberB) max = numberС;
-{
-    Console.WriteLine(max);
-}
+Console.WriteLine(max);
