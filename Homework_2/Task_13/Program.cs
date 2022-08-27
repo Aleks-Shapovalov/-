@@ -10,7 +10,10 @@ if (numberA < 100)
 {
     Console.WriteLine($"третьей цифры нет");
 }
-
+if (numberA > 1000)
+{
+    Console.WriteLine(numberA.ToString()[2]);
+}
 else
 {
     int num1 = (numberA % 100)%10;
