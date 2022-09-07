@@ -8,22 +8,22 @@ FillArrayRandomNumbers(numbers);
 PrintArray(numbers);
 int count = 0;
 
-for (int z = 0; z < numbers.Length; z++)
-    if (numbers[z] % 2 == 0)
+for (int i = 0; i < numbers.Length; i++)
+    if (numbers[i] % 2 == 0)
         count++;
 void FillArrayRandomNumbers(int[] numbers)
 {
-    for (int i = 0; i < numbers.Length; i++)
+    for (int j = 0; j < numbers.Length; j++)
     {
-        numbers[i] = new Random().Next(100, 1000);
+        numbers[j] = new Random().Next(100, 1000);
     }
 }
 void PrintArray(int[] numbers)
 {
     Console.Write("рандомный массив [ ");
-    for (int i = 0; i < numbers.Length; i++)
+    for (int q = 0; q < numbers.Length; q++)
     {
-        Console.Write(numbers[i] + " ");
+        Console.Write(numbers[q] + " ");
     }
     Console.Write("] ");
 }
