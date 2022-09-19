@@ -5,33 +5,29 @@
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-int deep1 = InputInt("Введите размерность 1: ");
-int deep2 = InputInt("Введите размерность 2: ");
-int deep3 = InputInt("Введите размерность 3: ");
+int size1 = InputInt("Формируем трехмерный массив. Введите первый размер: ");
+int size2 = InputInt("Введите второй размер: ");
+int size3 = InputInt("Введите третий размер: ");
 int countNums = 89;
-
-if (deep1 * deep2 * deep3 > countNums)
+if (size1 * size2 * size3 > countNums)
 {
     Console.Write("Массив слишком большой");
     return;
 }
 
-int[,,] resultNums = Create3DMassive(deep1, deep2, deep3);
-
+int[,,] resultNums = Create3DMassive(size1, size2, size3);
 for (int i = 0; i < resultNums.GetLength(0); i++)
 {
     for (int j = 0; j < resultNums.GetLength(1); j++)
     {
-        for (int k = 0; k < resultNums.GetLength(2); k++)
+        for (int q = 0; q < resultNums.GetLength(2); q++)
         {
-            Console.WriteLine($"[{i},{j},{k}] - {resultNums[i, j, k]}");
+            Console.WriteLine($"[{i},{j},{q}] - {resultNums[i, j, q]}");
         }
         Console.WriteLine();
     }
     Console.WriteLine();
 }
-
-
 int[,,] Create3DMassive(int size1, int size2, int size3)
 {
     int[,,] array = new int[size1, size2, size3];
@@ -56,18 +52,22 @@ int[,,] Create3DMassive(int size1, int size2, int size3)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(2); k++)
+            for (int q = 0; q < array.GetLength(2); q++)
             {
-                array[i, j, k] = values[valueIndex++];
+                array[i, j, q] = values[valueIndex++];
             }
         }
     }
     return array;
 }
-
-
 int InputInt(string output)
 {
     Console.Write(output);
     return int.Parse(Console.ReadLine());
+}
+
+if (size1 * size2 * size3 > countNums)
+{
+    Console.Write("Массив слишком большой");
+    return;
 }
