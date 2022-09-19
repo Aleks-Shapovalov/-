@@ -7,9 +7,7 @@
 
 Console.WriteLine("Введите размер массива");
 int size = Convert.ToInt32(Console.ReadLine());
-
 int[,] nums = new int[size, size];
-
 int num = 1;
 int i = 0;
 int j = 0;
@@ -27,9 +25,7 @@ while (num <= size * size)
         --i;
     ++num;
 }
-
 PrintArray(nums);
-
 void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
